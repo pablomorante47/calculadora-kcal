@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de kcal y macronutrientes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de kcal y macronutrientes</h1>
+    <form id="calculator-form">
+      <label for="gender">Género:</label>
+      <select id="gender" name="gender">
+        <option value="male">Hombre</option>
+        <option value="female">Mujer</option>
+      </select>
+      <br>
+      <label for="age">Edad:</label>
+      <input type="number" id="age" name="age" min="1" max="120">
+      <br>
+      <label for="weight">Peso (kg):</label>
+      <input type="number" id="weight" name="weight" min="1" max="300">
+      <br>
+      <label for="height">Altura (cm):</label>
+      <input type="number" id="height" name="height" min="1" max="300">
+      <br>
+      <label for="activity">Nivel de entrenamiento:</label>
+      <select id="activity" name="activity">
+        <option value="1.2">Sedentario (poco o ningún ejercicio)</option>
+        <option value="1.375">Ligero (ejercicio ligero o deportes 1-3 días a la semana)</option>
+        <option value="1.55">Moderado (ejercicio moderado o deportes 3-5 días a la semana)</option>
+        <option value="1.725">Activo (ejercicio duro o deportes 6-7 días a la semana)</option>
+        <option value="1.9">Muy activo (ejercicio muy duro o trabajo físico)</option>
+      </select>
+      <br>
+      <label for="goal">Objetivo:</label>
+      <select id="goal" name="goal">
+        <option value="lose">Pérdida de grasa</option>
+        <option value="maintain">Mantenimiento de peso</option>
+        <option value="gain">Aumento de peso</option>
+      </select>
+      <br>
+      <button type="submit">Calcular</button>
+    </form>
+    <div id="results" class="hidden">
+      <p>Total de kcal: <span id="kcal"></span></p>
+      <p>Proteínas: <span id="proteinas"></span> gramos</p>
+      <p>Carbohidratos: <span id="carbohidratos"></span> gramos</p>
+      <p>Grasas: <span id="grasas"></span> gramos</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
